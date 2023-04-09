@@ -71,7 +71,7 @@ const Question = ({ question, category, onSelect, handleState }) => {
 
     const controlTrueAnswer = () => {
         for (const item of questionAnswer[indiceAleatorio].respuestas) {
-            if(item.correcta === true){
+            if (item.correcta === true) {
                 return item.texto
             }
         }
@@ -85,44 +85,46 @@ const Question = ({ question, category, onSelect, handleState }) => {
                         <i className="fa-solid fa-backward"></i>
                         <p>Atras</p>
                     </div>
-                    <div className="question-section">
-                        <h2>{questionAnswer[indiceAleatorio].pregunta}</h2>
-                        <div key={questionAnswer[indiceAleatorio].pregunta} className="options-section">
-                            {questionAnswer[indiceAleatorio].respuestas.map((respuesta) => {
-                                return (
-                                    <Respuestas
-                                        value={respuesta.correcta}
-                                        index={respuesta.texto}
-                                        text={respuesta.texto}
-                                        handleSelectChoice={handleSelectChoice}
-                                    />
-                                )
-                            })}
+                    <div className="question">
+                        <div className="question-section">
+                            <h2>{questionAnswer[indiceAleatorio].pregunta}</h2>
+                            <div key={questionAnswer[indiceAleatorio].pregunta} className="options-section">
+                                {questionAnswer[indiceAleatorio].respuestas.map((respuesta) => {
+                                    return (
+                                        <Respuestas
+                                            value={respuesta.correcta}
+                                            index={respuesta.texto}
+                                            text={respuesta.texto}
+                                            handleSelectChoice={handleSelectChoice}
+                                        />
+                                    )
+                                })}
+                            </div>
                         </div>
-                    </div>
-                    <div className="count">
-                        <ProgressBar value={countAnswer} max={10} />
-                        <p>{countAnswer}/10</p>
-                    </div>
-                    <div>
-                        {showModal == true &&
-                            <Modal
-                                state={true}
-                                count={countAnswer}
-                                handleModal={closeModal}
-                                closeAll={closeAll}
-                            />
-                        }
+                        <div className="count">
+                            <ProgressBar value={countAnswer} max={10} />
+                            <p>{countAnswer}/10</p>
+                        </div>
+                        <div>
+                            {showModal == true &&
+                                <Modal
+                                    state={true}
+                                    count={countAnswer}
+                                    handleModal={closeModal}
+                                    closeAll={closeAll}
+                                />
+                            }
 
-                        {showModal == 3 &&
-                            <Modal
-                                state={false}
-                                count={countAnswer}
-                                handleModal={closeModal}
-                                closeAll={closeAll}
-                                correctAnswer={controlTrueAnswer()}
-                            />
-                        }
+                            {showModal == 3 &&
+                                <Modal
+                                    state={false}
+                                    count={countAnswer}
+                                    handleModal={closeModal}
+                                    closeAll={closeAll}
+                                    correctAnswer={controlTrueAnswer()}
+                                />
+                            }
+                        </div>
                     </div>
                 </>
             }
