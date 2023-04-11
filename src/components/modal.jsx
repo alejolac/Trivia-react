@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react"
+import confetti from 'canvas-confetti'
 
 export default function Modal({ state, count, handleModal, closeAll, correctAnswer="Hi" }) {
     const [winner, setWinner] = useState("")

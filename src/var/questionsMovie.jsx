@@ -89,6 +89,78 @@ const preguntasCine = [
             { texto: "1999", correcta: false }
         ]
     },
+    {
+        pregunta: "¿En qué serie se encuentra el personaje de Walter White?",
+        respuestas: [
+            { texto: "The Walking Dead", correcta: false },
+            { texto: "Breaking Bad", correcta: true },
+            { texto: "Game of Thrones", correcta: false },
+            { texto: "Stranger Things", correcta: false }
+        ]
+    },
+    {
+        pregunta: "¿Quién interpreta el papel principal en la serie 'Luther'?",
+        respuestas: [
+            { texto: "Idris Elba", correcta: true },
+            { texto: "David Tennant", correcta: false },
+            { texto: "Matt Smith", correcta: false },
+            { texto: "Christopher Eccleston", correcta: false }
+        ]
+    },
+    {
+        pregunta: "¿En qué serie de televisión aparece el personaje Eleven?",
+        respuestas: [
+            { texto: "The Handmaid's Tale", correcta: false },
+            { texto: "Westworld", correcta: false },
+            { texto: "Stranger Things", correcta: true },
+            { texto: "Black Mirror", correcta: false }
+        ]
+    },
+    {
+        pregunta: "¿En qué serie se encuentra el personaje de Michael Scott?",
+        respuestas: [
+            { texto: "The Office", correcta: true },
+            { texto: "Parks and Recreation", correcta: false },
+            { texto: "Brooklyn Nine-Nine", correcta: false },
+            { texto: "The Good Place", correcta: false }
+        ]
+    },
+    {
+        pregunta: "¿Cuál es el nombre del personaje interpretado por Emilia Clarke en la serie 'Game of Thrones'?",
+        respuestas: [
+            { texto: "Daenerys Targaryen", correcta: true },
+            { texto: "Cersei Lannister", correcta: false },
+            { texto: "Arya Stark", correcta: false },
+            { texto: "Sansa Stark", correcta: false }
+        ]
+    },
+    {
+        pregunta: "¿En qué ciudad se desarrolla la serie 'Friends'?",
+        respuestas: [
+            { texto: "Nueva York", correcta: true },
+            { texto: "Los Ángeles", correcta: false },
+            { texto: "Chicago", correcta: false },
+            { texto: "Miami", correcta: false }
+        ]
+    },
+    {
+        pregunta: "¿Cuál es el nombre del personaje interpretado por Lena Headey en la serie 'Game of Thrones'?",
+        respuestas: [
+            { texto: "Cersei Lannister", correcta: true },
+            { texto: "Daenerys Targaryen", correcta: false },
+            { texto: "Sansa Stark", correcta: false },
+            { texto: "Arya Stark", correcta: false }
+        ]
+    },
+    {
+        pregunta: "¿Cuál es el nombre del personaje interpretado por David Schwimmer en la serie 'Friends'?",
+        respuestas: [
+            { texto: "Ross Geller", correcta: true },
+            { texto: "Chandler Bing", correcta: false },
+            { texto: "Joey Tribbiani", correcta: false },
+            { texto: "Monica Geller", correcta: false }
+        ]
+    }
 ]
 
 export default preguntasCine;

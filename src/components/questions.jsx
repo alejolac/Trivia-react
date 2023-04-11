@@ -6,6 +6,8 @@ import cienciaQuestion from "../var/questionsScience.jsx";
 import Respuestas from "./answers.jsx";
 import ProgressBar from "./progressBar.jsx";
 import Modal from "./modal.jsx";
+import confetti from 'canvas-confetti'
+
 
 
 const Question = ({ question, category, onSelect, handleState }) => {
@@ -58,6 +60,7 @@ const Question = ({ question, category, onSelect, handleState }) => {
                 setQuestionAnswer(newArray);
             } else {
                 setShowModal(1);
+                confetti()
             }
         } else {
             setShowModal(3);
@@ -81,19 +84,19 @@ const Question = ({ question, category, onSelect, handleState }) => {
         <>
             {questionAnswer.length >= 1 &&
                 <>
-                    <div onClick={() => { handleBack() }} className="back" style={{ position: 'absolute', top: 0, left: 0 }}>
+                    <div onClick={() => { handleBack() }} className="back" key={1} style={{ position: 'absolute', top: 0, left: 0 }}>
                         <i className="fa-solid fa-backward"></i>
                         <p>Atras</p>
                     </div>
                     <div className="question">
                         <div className="question-section">
                             <h2>{questionAnswer[indiceAleatorio].pregunta}</h2>
-                            <div key={questionAnswer[indiceAleatorio].pregunta} className="options-section">
+                            <div className="options-section">
                                 {questionAnswer[indiceAleatorio].respuestas.map((respuesta) => {
                                     return (
                                         <Respuestas
                                             value={respuesta.correcta}
-                                            index={respuesta.texto}
+                                            key={respuesta.texto}
                                             text={respuesta.texto}
                                             handleSelectChoice={handleSelectChoice}
                                         />

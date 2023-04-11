@@ -1,11 +1,11 @@
-export default function Respuestas({ value, index, text, handleSelectChoice }) {
+export default function Respuestas({ value, text, handleSelectChoice }) {
 
-    const handleSelect = (value) => {
+    const handleSelect = (value) => () => {
         handleSelectChoice(value);
     }
 
     return (
-        <div onClick={() => handleSelect(value)} className="option" key={index}>
+        <div onClick={handleSelect(value)} className="option">
             {text}
         </div>
     )
